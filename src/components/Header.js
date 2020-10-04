@@ -1,14 +1,13 @@
 import React from "react";
-import styles from "../styles";
+import {Title,Description } from "./styles";
 
 const Header = () => {
     return (
-      <div>
-      <p></p>
-      <h1 style={styles.text}>
+      <Title>
+        <Description>
         COOKIE DOLLS KILL
-      </h1>
-      </div>
+        </Description>
+        </Title>  
     );
   };
   

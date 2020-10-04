@@ -1,19 +1,27 @@
 import React from "react";
 import "./App.css";
-//Data
-import items from "./items";
+
 //Styles
-import styles from "./styles";
+import {ThemeProvider} from "styled-components";
+import {GlobalStyle} from "./styles";
+
 //Components
 import DollList from "./components/CookiedollList.js";
 import Header from "./components/Header";
 
+const theme ={
+  mainColor:"black",
+  backgroundColor:"grey",
+  secondaryColor:"white",
+}
+
 function App() {
   return (
-    <div style={styles.body} >
-      <Header/>
+    <ThemeProvider theme={theme}>
+<GlobalStyle/>  
+  <Header/>
       <DollList/>
-    </div>
+    </ThemeProvider>
   );
 }
 

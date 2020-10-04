@@ -1,14 +1,13 @@
 import React from "react";
-import styles from "../styles";
-
+import {ItemWrapper} from "./styles";
 const DollItem = (props) => {
     const {item}=props;
     return (
-        <div style={styles.item} key={item.id}>
-        <img style={styles.Image} src={item.image} alt={item.name} />
-        <p style={styles.text}>{item.name}</p>
-        <p style={styles.text}>{item.price}$</p>
-      </div>
+        <ItemWrapper key={item.id}>
+        <img  src={item.image} alt={item.name} />
+        <p >{item.name}</p>
+        <p class="price">{item.price}$</p>
+        </ItemWrapper>
     );
   
   };
