@@ -1,23 +1,18 @@
 import React from "react";
 import "./App.css";
+//Data
 import items from "./items";
+//Styles
 import styles from "./styles";
+//Components
+import DollList from "./components/CookiedollList.js";
+import Header from "./components/Header";
 
 function App() {
-  const itemList = items.map((item) => (
-    <div style={styles.item} key={item.id}>
-      <img style={styles.Image} src={item.image} alt={item.name} />
-      <p style={styles.text}>{item.name}</p>
-      <p style={styles.text}>{item.price}$</p>
-    </div>
-  ));
   return (
     <div style={styles.body} >
-      <p></p>
-      <h1 style={styles.text}>
-        COOKIE DOLLS KILL
-      </h1>
-      <div style={styles.list}>{itemList}</div>
+      <Header/>
+      <DollList/>
     </div>
   );
 }
